@@ -14,9 +14,9 @@ echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
-curl -L --silent $DOWNLOAD_URL | tar xzv
+curl -L --silent $DOWNLOAD_URL | tar xzv  >/dev/null 2>&1
 
-echo "exporting PATH and LIBRARY_PATH" | indent
+echo "exporting PATH and AURORACALC" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/qio.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:vendor/qio/bin"' >> $PROFILE_PATH
