@@ -1,5 +1,5 @@
-Heroku buildpack: QIO Aurora
-============================
+Heroku buildpack: QIO Aurora Front End
+======================================
 
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for using [Qualcom-ICSI-OGI (QIO) Aurora front end](https://github.com/chinshr/qio) in your project.
 It doesn't do anything else, so to actually compile your app you should use [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi) to combine it with a real buildpack.
@@ -19,7 +19,7 @@ To use this buildpack, you should prepare a .buildpacks file that contains this 
     ...
     
     $ cat .buildpacks
-    https://github.com/lepinsk/heroku-buildpack-sox
+    https://github.com/lepinsk/heroku-buildpack-qio
 
     $ heroku create --buildpack https://github.com/ddollar/heroku-buildpack-multi
 
